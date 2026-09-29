@@ -135,6 +135,25 @@ h1 {
     margin-bottom: 0.8rem;
 }
 
+.card img {
+    width: 100%;
+    height: auto;
+}
+.beach {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.6)
+    ), url("images/ranta.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.grayscale {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+}
+
 .card:nth-child(1) {
     border-top: 4px solid var(--blue);
 }

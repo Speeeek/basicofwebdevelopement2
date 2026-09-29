@@ -1,78 +1,355 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f3f3f3;
-  color: #222;
-  line-height: 1.6;
+    margin: 0;
+
+    background: #08090d;
+    color: #eeeeF2;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    height: 360px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #54258a 0%,
+            #201238 30%,
+            transparent 65%
+        ),
+        linear-gradient(
+            135deg,
+            #08090d,
+            #101018
+        );
+
+    border-bottom: 1px solid #29233a;
+}
+
+.eyebrow {
+    margin: 0 0 18px;
+
+    color: #ae72ff;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 6px;
+}
+
+header h1 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 64px;
+    letter-spacing: 3px;
+}
+
+.subtitle {
+    margin-top: 18px;
+
+    color: #9999a5;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   MAIN
+========================= */
 
 main {
-  max-width: 960px;
-  margin: 40px auto;
-  padding: 24px;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    width: 1100px;
+    margin: 0 auto;
 }
 
-h1, h2, h3 {
-  margin-top: 0;
-  color: #111111;
+
+/* =========================
+   MOUSE LIST
+========================= */
+
+.mouse-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 45px;
+
+    margin-top: 80px;
 }
 
-p {
-  margin: 0 0 1rem;
+
+/* =========================
+   MOUSE CARD
+========================= */
+
+.mouse-card {
+    display: flex;
+
+    min-height: 520px;
+
+    background: #111218;
+
+    border: 1px solid #252630;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
 }
 
-nav {
-  background: #222222;
-  padding: 12px 20px;
+.mouse-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #8d50dc;
 }
 
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  margin-right: 12px;
+
+/* =========================
+   IMAGE
+========================= */
+
+.mouse-photo {
+    width: 44%;
+
+    padding: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #292039 0%,
+            #15151e 45%,
+            #0b0c10 100%
+        );
 }
 
-nav a:hover {
-  text-decoration: underline;
+.mouse-photo img {
+    width: 100%;
+    height: 430px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
-button {
-  background-color: #333333;
-  color: #ffffff;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 4px;
-  cursor: pointer;
+
+/* =========================
+   MOUSE INFORMATION
+========================= */
+
+.mouse-content {
+    width: 56%;
+
+    padding: 42px;
 }
 
-button:hover {
-  background-color: #555555;
+.brand {
+    margin: 0 0 8px;
+
+    color: #aa6cf7;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
 }
 
-.container {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+.mouse-content h2 {
+    margin: 0 0 30px;
+
+    color: white;
+
+    font-size: 36px;
 }
 
-.card {
-  flex: 1 1 220px;
-  background: #fafafa;
-  border: 1px solid #dddddd;
-  border-radius: 6px;
-  padding: 16px;
+.mouse-content h3 {
+    margin: 0;
+
+    padding-bottom: 13px;
+
+    border-bottom: 1px solid #292a34;
+
+    font-size: 17px;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+
+/* =========================
+   SPECS
+========================= */
+
+.specs {
+    margin: 0;
+}
+
+.spec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 11px 0;
+
+    border-bottom: 1px solid #202129;
+
+    font-size: 14px;
+}
+
+.spec span {
+    color: #858590;
+}
+
+.spec strong {
+    color: #eeeeF2;
+
+    text-align: right;
+}
+
+
+/* =========================
+   NOTES
+========================= */
+
+.note {
+    margin: 14px 0 0;
+
+    color: #686873;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   COMPARISON
+========================= */
+
+.comparison {
+    margin: 110px 0;
+}
+
+.comparison h2 {
+    margin-bottom: 35px;
+
+    text-align: center;
+
+    font-size: 38px;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: #111218;
+
+    border: 1px solid #292a34;
+}
+
+th,
+td {
+    padding: 18px 20px;
+
+    border-bottom: 1px solid #292a34;
+
+    text-align: center;
+}
+
+th {
+    background: #1b1725;
+
+    color: #c08aff;
+
+    font-size: 13px;
+}
+
+td {
+    color: #d0d0d7;
+
+    font-size: 14px;
+}
+
+td:first-child {
+    color: white;
+
+    font-weight: bold;
+
+    text-align: left;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.table-note {
+    margin-top: 12px;
+
+    color: #686873;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px;
+
+    background: #06070a;
+
+    border-top: 1px solid #25222e;
+
+    text-align: center;
+}
+
+footer p {
+    margin: 0 0 8px;
+
+    color: #a970ff;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+footer span {
+    color: #5f606a;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
 }
