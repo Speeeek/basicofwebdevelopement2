@@ -118,6 +118,11 @@ h1 {
     font-size: 2rem;
 }
 
+.gallery-title {
+    font-size: 36px;
+    margin: 50px 0 35px;
+}
+
 .cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
