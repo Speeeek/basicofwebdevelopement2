@@ -72,6 +72,11 @@ nav a:hover {
     max-width: 700px;
 }
 
+.gallery {
+    padding: 5rem 0;
+    background-color: #f7f7f7;
+}
+
 .label {
     display: inline-block;
     margin-bottom: 1rem;
@@ -119,9 +124,10 @@ h1 {
 }
 
 .gallery-title {
-    font-size: 36px;
-    margin: 50px 0 35px;
+    margin-bottom: 2rem;
+    font-size: 2rem;
 }
+
 
 .cards {
     display: grid;
@@ -143,7 +149,9 @@ h1 {
 .card img {
     width: 100%;
     height: auto;
+    display: block;
 }
+
 .beach {
     background-image: linear-gradient(
         rgba(255, 255, 255, 0.6),
