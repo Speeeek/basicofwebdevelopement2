@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ville Heikkiniemi">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Centria Edu | Contact</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    centria <span>edu</span>
+                </div>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#topics">Topics</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="topics" id="contact">
+            <div class="container">
+
+                <h1>Contact us</h1>
+
+                <p>
+                    Please fill in the form below to contact us.
+                    We will get back to you as soon as possible.
+                </p>
+
+                <form class="card"
+                      action="https://httpbin.org/post"
+                      method="post">
+                    <p class="form-hint">Fields marked with * are required.</p>
+                    <label for="name">Name *</label>
+                    <p id="name-help">Enter 2-80 characters.</p>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        minlength="2"
+                        maxlength="80"
+                    >
+                   
+
+                    
+                    <label for="email">Email address *</label>
+                    <p id="email-help"> Enter a valid email address, e.g. name@example.com. </p>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        maxlength="120"
+                    >
+
+                    
+                    <label for="phone">Phone number</label>
+                    <p id="phone-help">
+                    Enter 7–15 digits, optionally starting with +.
+                    Do not use spaces or hyphens. Example: +358401234567.
+                    </p>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        pattern="[+]?[0-9]{7,15}"
+                    >
+
+                    
+                    <label for="subject">Subject *</label>
+                    <select
+                        id="subject"
+                        name="subject"
+                        required
+                    >
+                        <option value="">Select a subject</option>
+                        <option value="general">General question</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="cooperation">Cooperation</option>
+                    </select>
+
+                    
+                    <fieldset>
+                        <legend>Preferred contact method</legend>
+
+                        <input
+                            type="radio"
+                            id="contact-email"
+                            name="contact-method"
+                            value="email"
+                            required
+                        >
+                        <label for="contact-email">Email</label>
+
+                        <input
+                            type="radio"
+                            id="contact-phone"
+                            name="contact-method"
+                            value="phone"
+                        >
+                        <label for="contact-phone">Phone</label>
+                    </fieldset>
+
+
+                    
+                    <label for="message">Message *</label>
+                    <p id="message-help">Enter 20-1000 characters.</p>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        minlength="20"
+                        maxlength="1000"
+                        required
+                    ></textarea>
+
+                 
+                    <button type="submit">Send</button>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
