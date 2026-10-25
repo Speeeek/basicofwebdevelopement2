@@ -103,6 +103,15 @@ nav a:hover {
     background-color: #eeeeee;
 }
 
+.gallery-item a {
+    display: block;
+}
+
+.gallery-item a:hover img,
+.gallery-item a:focus-visible img {
+    opacity: 0.8;
+}
+
 .gallery-item h3 {
     padding: 20px;
 }
@@ -133,4 +142,34 @@ footer {
     padding: 20px;
     background-color: #303030;
     color: white;
+}
+
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
 }
