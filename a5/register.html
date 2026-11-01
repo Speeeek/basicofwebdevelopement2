@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Training Website</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <p>Website</p>
+          </div>
+
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="register.html" aria-current="page">Register</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+    <main>
+      <section class="form-section">
+        <div class="container">
+          <h1>Create an account</h1>
+          <p>Fill in all the fields below to register.</p>
+
+          <form
+            class="registration-form"
+            action="https://httpbin.org/post"
+            method="post"
+          >
+            <p class="form-hint">All fields are required.</p>
+
+            <div class="form-field">
+              <label for="firstname">Firstname</label>
+              <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                autocomplete="given-name"
+                minlength="2"
+                maxlength="80"
+                required
+              >
+            </div>
+
+            <div class="form-field">
+              <label for="lastname">Lastname</label>
+              <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                autocomplete="family-name"
+                minlength="2"
+                maxlength="80"
+                required
+              >
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                maxlength="120"
+                required
+              >
+            </div>
+
+            <div class="form-field">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                autocomplete="username"
+                minlength="3"
+                maxlength="30"
+                required
+              >
+            </div>
+
+            <div class="form-field">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                autocomplete="new-password"
+                minlength="8"
+                required
+              >
+            </div>
+
+            <div class="form-field">
+              <label for="phonenumber">Phonenumber</label>
+              <input
+                type="tel"
+                id="phonenumber"
+                name="phonenumber"
+                autocomplete="tel"
+                pattern="[0-9+() -]{7,20}"
+                required
+              >
+            </div>
+
+            <div class="form-field">
+              <label for="user-type">User type</label>
+              <select id="user-type" name="user-type" required>
+                <option value="" selected disabled>Select a user type</option>
+                <option value="traveler">Traveler</option>
+                <option value="photographer">Photographer</option>
+                <option value="local-guide">Local guide</option>
+              </select>
+            </div>
+
+            <div class="form-field checkbox-field">
+              <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                value="accepted"
+                required
+              >
+              <label for="terms">I accept the terms of use</label>
+            </div>
+
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026</p>
+    </footer>
+  </body>
+</html>
