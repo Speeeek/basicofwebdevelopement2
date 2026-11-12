@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matkatoive - Saaristoretket</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-content container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.webp" alt="" class="logo-mark">
+          Saaristoretket
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Etusivu</a>
+        <a href="matkainfo.html">Matkainfo</a>
+        <a href="matkatoive.html" aria-current="page">Matkatoive</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="matkatoive osio">
+    
+      <div class="matkatoive-content container">
+        <h1>Matkatoive</h1>
+        <p class="matkatoive-kuvaus">
+          Kerro meille matkatoiveesi ja toiveesi saaristoretkestä.
+          Täytä alla oleva lomake, niin otamme sinuun yhteyttä mahdollisimman pian.
+          <br> Kaikki kentät ovat pakollisia
+        </p>
+
+        <p class="harjoitus">Harjoituslomake – tietoja ei lähetetä mihinkään.</p>
+
+        <form class="matkatoive-lomake" action="#">
+          <div class="lomake-kentat">
+            <div class="kentta">
+              <label for="email">Sähköposti</label>
+              <input type="email" id="email" name="email" required aria-describedby="email-virhe">
+              <p class="virhe" id="email-virhe">Anna sähköposti muodossa nimi@esimerkki.fi</p>
+            </div>
+
+            <div class="kentta">
+              <label for="kohde">Kohde</label>
+              <select id="kohde" name="kohde" required>
+                <option value="">Valitse kohde</option>
+                <option value="saari1">Ahvenanmaan majakkaretki</option>
+                <option value="saari2">Porvoon purjehdus</option>
+                <option value="saari3">Nauvon mökkiloma</option>
+              </select>
+            </div>
+            <div class="kentta">
+              <label for="lahtopaiva">Lähtöpäivä</label>
+              <input type="date" id="lahtopaiva" name="lahtopaiva" required>
+            </div>
+            <div class="kentta">
+              <label for="matkustaja">Matkustajien määrä </label>
+              <input type="number" id="matkustaja" name="matkustaja" min="1" max="8" required>
+            </div>
+            <div class="kentta">
+              <label for="lisatiedot">Lisätiedot</label>
+              <textarea id="lisatiedot" name="lisatiedot" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="button">Lähetä matkatoive</button>
+          </div>
+        </form>
+      </div>
+      
+    </section>
+
+
+  <section class="yhteystiedot osio">
+  <div class="container">
+    <h2>Yhteystiedot</h2>
+    <address>
+      Saaristoretket Oy<br>
+      katu 12, 00000 Kaupunki<br>
+      <a href="tel:+358401234567">040 123 4567</a><br>
+      <a href="mailto:info@saaristoretket.example">info@saaristoretket.example</a>
+    </address>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content container">
+      <p class="footer-nimi">Saaristoretket Oy</p>
+
+      <address>
+        katu 12, 00000 Kaupunki<br>
+        <a href="tel:+358401234567">040 123 4567</a><br>
+        <a href="mailto:info@saaristoretket.example">info@saaristoretket.example</a>
+      </address>
+
+      <p>© 2026 Saaristoretket Oy</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
